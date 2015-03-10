@@ -1,0 +1,46 @@
+# ConkyDailyNotes settings by ErkanMDR#
+# https://github.com/ErkanMDR/ConkyDailyNotes #
+background no
+update_interval 10
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+
+# Window specifications #
+own_window yes
+own_window_class conky
+own_window_transparent yes
+own_window_type override
+own_window_hints undecorate,below,sticky,skip_taskbar,skip_pager
+
+border_inner_margin 0
+border_outer_margin 0
+
+alignment br
+gap_x 10
+gap_y 10
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+text_buffer_size 2048
+
+uppercase no
+
+default_color FFFFFF
+
+
+TEXT
+${voffset 10}${font Ubuntu Light:size=40}${execpi 1 wget -q 'https://raw.githubusercontent.com/ErkanMDR/ConkyDailyNotes/master/header.mdr' -O '/home/erkanmdr/repo.txt' && tail -1 '/home/erkanmdr/repo.txt'}${font}${voffset -10}
+${voffset 10}${alignr}${font Ubuntu Semi-Light:size=10}${execpi 1 wget -q 'https://raw.githubusercontent.com/ErkanMDR/ConkyDailyNotes/master/sub.mdr' -O '/home/erkanmdr/sub.txt' && tail -1 '/home/erkanmdr/sub.txt'}${font}${voffset -10}
+
